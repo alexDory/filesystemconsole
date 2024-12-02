@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "commands.h": "c",
+        "task.h": "c",
+        "freertos.h": "c",
+        "sdmmc_host.h": "c",
+        "esp_console.h": "c"
+    }
+}
