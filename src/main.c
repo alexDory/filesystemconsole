@@ -11,6 +11,6 @@ void app_main(void)
     ESP_LOGI(TAG,"app_main starting !");
 
     fileSystem_init();
-    CLI_console_init();
+    client_console_init();
 }
 #endif

@@ -1,7 +1,7 @@
 /*
  * File:        client.h
  * Author:      Alex Doury
- * Created:     November 2024
+ * Created:     Decembre 2024
  * 
  * Description: 
  * This header file provides the functions required to initialize and run the console
@@ -12,4 +12,4 @@
 /**
  * @brief Initialize the esp_console system.
  */
-void CLI_console_init(void);
+void client_console_init(void);

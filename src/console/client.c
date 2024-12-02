@@ -1,7 +1,7 @@
 /*
  * File:        client.c
  * Author:      Alex Doury
- * Created:     November 2024
+ * Created:     Decembre 2024
  * 
  * Description: 
  * This source file provides the functions required to initialize and run the console
@@ -45,7 +45,7 @@ static const cmd_t custom_commands[] = {
 /**
  * @brief  Setup and register the basic custom commands.
  */
-static void CLI_register_commands(void)
+static void client_register_commands(void)
 {
     for (size_t i = 0; i < sizeof(custom_commands) / sizeof(custom_commands[0]); i++) {
         const cmd_t* cmd = &custom_commands[i];
@@ -68,7 +68,7 @@ static void CLI_register_commands(void)
 /*============= PUBLIC =============*/
 /*==================================*/
 
-void CLI_console_init(void)
+void client_console_init(void)
 {
     esp_console_repl_t *reply = NULL;
     esp_console_repl_config_t reply_config = ESP_CONSOLE_REPL_CONFIG_DEFAULT();
@@ -76,7 +76,7 @@ void CLI_console_init(void)
     reply_config.prompt = "fancyConsole>";
     reply_config.max_cmdline_length = 256;
 
-    CLI_register_commands();
+    client_register_commands();
 
     /* Register commands */
     esp_console_register_help_command();

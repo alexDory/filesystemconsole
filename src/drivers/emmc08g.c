@@ -20,7 +20,6 @@ static const char *TAG = "eMMC_Driver";
 static SemaphoreHandle_t emmc_mutex = NULL;
 
 
-static esp_err_t emmc_secure_erase(void);
 static esp_err_t emmc_test_read_write(void);
 
 
@@ -57,11 +56,6 @@ static esp_err_t emmc_test_read_write(void)
     return ESP_OK;
 }
 
-static esp_err_t emmc_secure_erase(void) 
-{
-    ESP_LOGI(TAG, "Secure erase is not implemented in this example.");
-    return ESP_OK;
-}
 
 /*==================================*/
 /*============= PUBLIC =============*/
@@ -129,11 +123,6 @@ void emmc_run_tests(void)
 
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "Read/Write test failed");
-    }
-
-    ret = emmc_secure_erase();
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Secure erase failed");
     }
 
     ESP_LOGI(TAG, "eMMC driver completed");
