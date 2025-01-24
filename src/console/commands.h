@@ -1,7 +1,7 @@
 /*
  * File:        commands.h
  * Author:      Alex Doury
- * Created:     Decembre 2024
+ * Created:     December 2024
  * 
  * Description: 
  * This header file provides the functions required to setup and execute 
@@ -73,3 +73,12 @@ int console_freeHeap(int argc, char **argv);
  * @return 0 if success and 1 if fail.
  */
 int console_testemmc(int argc, char **argv);
+
+
+/**
+ * @brief Get the touch state of the touch sensor pads.
+ * @param argc  Number of commands inputs.
+ * @param argv  Pointer array of the commands inputs.
+ * @return 0 if success and 1 if fail.
+ */
+int console_getTouchState(int argc, char **argv);

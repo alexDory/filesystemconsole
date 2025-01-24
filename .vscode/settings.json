@@ -4,6 +4,22 @@
         "task.h": "c",
         "freertos.h": "c",
         "sdmmc_host.h": "c",
-        "esp_console.h": "c"
+        "esp_console.h": "c",
+        "stat.h": "c",
+        "nvs_flash.h": "c",
+        "stdio.h": "c",
+        "sdmmc_cmd.h": "c",
+        "emmc08g.h": "c",
+        "string.h": "c",
+        "filesystem.h": "c",
+        "esp_system.h": "c",
+        "gpio.h": "c",
+        "adc.h": "c",
+        "adc_oneshot.h": "c",
+        "adc_cali.h": "c",
+        "touch_sensor.h": "c",
+        "touch_pad.h": "c",
+        "inttypes.h": "c",
+        "touch_sensor_common.h": "c"
     }
 }

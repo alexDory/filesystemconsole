@@ -22,7 +22,7 @@ typedef struct {
 
 static const char *TAG = "Console";
 
-static void CLI_register_commands(void);
+static void client_register_commands(void);
 
 static const cmd_t custom_commands[] = {
     { "reboot",                        "Reboot the ESP32 device",                                                               esp_restart                    },
@@ -34,6 +34,7 @@ static const cmd_t custom_commands[] = {
     { "printfile",                     "Print the content of a file, path is relative to current directory",                    console_printFileContent       },
     { "freeheap",                      "Print the free heap size in RAM memory",                                                console_freeHeap               },
     { "testemmc",                      "Run the test sequence from the emmc08g custom driver",                                  console_testemmc               },
+    { "gettouch",                      "Get values sensed on all available touch pads.",                                        console_getTouchState          },
 
 };
 

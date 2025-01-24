@@ -16,11 +16,10 @@
 #include "freertos/task.h"
 #include "string.h"
 #include "emmc08g.h"
-
-
-#define ONE_SECOND                   1000/portTICK_PERIOD_MS
-
-static const char *TAG = "Console";
+#include "esp_log.h"
+#include "driver/touch_sensor.h"
+#include "driver/touch_pad.h"
+#include "touchSensor/touchSensor.h"
 
 /*==================================*/
 /*============= PUBLIC =============*/
@@ -104,5 +103,19 @@ int console_testemmc(int argc, char **argv)
         return 1;
     }
     emmc_run_tests();
+    return 0;
+}
+
+int console_getTouchState(int argc, char **argv)
+{
+    if(argc > 1){
+        printf("Usage: getmag\n");
+        return 1;
+    }
+
+    touchSensor_init();
+
+    xTaskCreate(&touchSensor_readTask, "touchSensor_readTask", 4096, NULL, 5, NULL);
+
     return 0;
 }
