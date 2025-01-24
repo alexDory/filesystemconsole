@@ -9,17 +9,10 @@
  */
 #pragma once
 
-/** 
-* @brief    
-*           
-* 
-*/
-
 /**
  * @brief Initialize the touch sensor module.
  */
 void touchSensor_init(void);
-
 
 /**
  * @brief Task to read values sensed on all available touch pads. Print out values of all touch pads. 
